@@ -23,19 +23,19 @@ pipeline {
         stage('Testing Discovery Service') {
             steps {
                 echo 'Testing Discovery Service...'
-				bat 'cd ./discovery-service/ && mvn clean test'
+				bat 'cd ./discovery-service/ && mvn test'
             }
         }
         stage('Testing API Gateway') {
             steps {
                 echo 'Testing API Gateway...'
-				bat 'cd ./api-gateway/ && mvn clean test'
+				bat 'cd ./api-gateway/ && mvn test'
             }
         }
 		stage('Testing Car Service') {
             steps {
                 echo 'Testing Car Service...'
-				bat 'cd ./car-service/ && mvn clean test'
+				bat 'cd ./car-service/ && mvn test'
             }
         }
         stage('Deploy') {
